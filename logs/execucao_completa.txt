@@ -1,0 +1,291 @@
+
+===========================================================================
+          PARTE 1: TEORIA DOS CONJUNTOS (DEMONSTRAÇÃO OBRIGATÓRIA)         
+===========================================================================
+
+
+--- CENÁRIO 1: CASO GERAL COM ELEMENTOS REPETIDOS ------------------------
+Entrada Bruta:
+  Conjunto A : 1, 2, 2, 3, 4
+  Conjunto B : 3, 4, 5, 6
+  Universo U : 1 a 10
+  Conjunto A                      :
+     -> Implementação Manual : {1, 2, 3, 4}
+     -> Solução Nativa (set) : {1, 2, 3, 4}  [✓ VALIDADO]
+     📖 Conceito: Conjunto de entrada A com elementos repetidos eliminados para garantir a unicidade matemática.
+  Conjunto B                      :
+     -> Implementação Manual : {3, 4, 5, 6}
+     -> Solução Nativa (set) : {3, 4, 5, 6}  [✓ VALIDADO]
+     📖 Conceito: Conjunto de entrada B com elementos repetidos eliminados.
+  |A| (Cardinalidade de A)        :
+     -> Implementação Manual : 4
+     -> Solução Nativa (set) : 4  [✓ VALIDADO]
+     📖 Conceito: A cardinalidade (|A|) representa a quantidade total de elementos únicos pertencentes a A.
+  |B| (Cardinalidade de B)        :
+     -> Implementação Manual : 4
+     -> Solução Nativa (set) : 4  [✓ VALIDADO]
+     📖 Conceito: A cardinalidade (|B|) representa a quantidade total de elementos únicos pertencentes a B.
+  A ∪ B (União)                   :
+     -> Implementação Manual : {1, 2, 3, 4, 5, 6}
+     -> Solução Nativa (set) : {1, 2, 3, 4, 5, 6}  [✓ VALIDADO]
+     📖 Conceito: A união representa a junção de dois conjuntos, ignorando os números repetidos e criando um conjunto que possui todos os elementos do conjunto A e B.
+  A ∩ B (Interseção)              :
+     -> Implementação Manual : {3, 4}
+     -> Solução Nativa (set) : {3, 4}  [✓ VALIDADO]
+     📖 Conceito: A interseção representa os elementos comuns, ou seja, apenas os elementos que pertencem simultaneamente a A e a B. Se não houver elementos comuns, resulta no conjunto vazio (Ø).
+  A - B (Diferença)               :
+     -> Implementação Manual : {1, 2}
+     -> Solução Nativa (set) : {1, 2}  [✓ VALIDADO]
+     📖 Conceito: A diferença (A - B) representa os elementos que pertencem exclusivamente a A e NÃO pertencem a B. A ordem dos conjuntos importa!
+  B - A (Diferença)               :
+     -> Implementação Manual : {5, 6}
+     -> Solução Nativa (set) : {5, 6}  [✓ VALIDADO]
+     📖 Conceito: A diferença (B - A) representa os elementos que pertencem exclusivamente a B e NÃO pertencem a A.
+  A Δ B (Diferença Simétrica)     :
+     -> Implementação Manual : {1, 2, 5, 6}
+     -> Solução Nativa (set) : {1, 2, 5, 6}  [✓ VALIDADO]
+     📖 Conceito: A diferença simétrica representa os elementos que pertencem a A ou a B, mas NÃO a ambos ao mesmo tempo ((A-B) ∪ (B-A)). É o 'OU exclusivo' (XOR) da teoria dos conjuntos.
+  A ⊆ B (Inclusão/Subconjunto)    :
+     -> Implementação Manual : False
+     -> Solução Nativa (set) : False  [✓ VALIDADO]
+     📖 Conceito: A inclusão A ⊆ B indica que TODO elemento do conjunto A também está contido no conjunto B.
+  A ⊂ B (Inclusão Própria)        :
+     -> Implementação Manual : False
+     -> Solução Nativa (set) : False  [✓ VALIDADO]
+     📖 Conceito: A inclusão própria A ⊂ B exige que A seja subconjunto de B e que B tenha pelo menos um elemento a mais que A (A ≠ B).
+  Complemento de A em U           :
+     -> Implementação Manual : {5, 6, 7, 8, 9, 10}
+     -> Solução Nativa (set) : {5, 6, 7, 8, 9, 10}  [✓ VALIDADO]
+     📖 Conceito: O complemento relativo (U - A) representa todos os elementos do Universo U que NÃO pertencem ao conjunto A.
+  3 ∈ A (Pertinência)             :
+     -> Implementação Manual : True
+     -> Solução Nativa (set) : True  [✓ VALIDADO]
+  [3, 4] ⊆ A                      :
+     -> Implementação Manual : True
+     -> Solução Nativa (set) : True  [✓ VALIDADO]
+  [3, 4] ⊂ A                      :
+     -> Implementação Manual : True
+     -> Solução Nativa (set) : True  [✓ VALIDADO]
+  5 ∈ A (Pertinência)             :
+     -> Implementação Manual : False
+     -> Solução Nativa (set) : False  [✓ VALIDADO]
+
+--- CENÁRIO 2: CASOS DE BORDA (TODAS AS LINHAS DA TABELA) ----------------
+
+>>> CONJUNTO VAZIO (A = Ø, B = {1, 2})
+  A ∪ B                           :
+     -> Implementação Manual : {1, 2}
+     -> Solução Nativa (set) : {1, 2}  [✓ VALIDADO]
+  A ∩ B                           :
+     -> Implementação Manual : Ø
+     -> Solução Nativa (set) : Ø  [✓ VALIDADO]
+  A - B                           :
+     -> Implementação Manual : Ø
+     -> Solução Nativa (set) : Ø  [✓ VALIDADO]
+  A Δ B                           :
+     -> Implementação Manual : {1, 2}
+     -> Solução Nativa (set) : {1, 2}  [✓ VALIDADO]
+  A ⊆ B                           :
+     -> Implementação Manual : True
+     -> Solução Nativa (set) : True  [✓ VALIDADO]
+  A ⊂ B                           :
+     -> Implementação Manual : True
+     -> Solução Nativa (set) : True  [✓ VALIDADO]
+
+>>> CONJUNTOS IGUAIS (A = B = {1, 2, 3})
+  A ∪ B                           :
+     -> Implementação Manual : {1, 2, 3}
+     -> Solução Nativa (set) : {1, 2, 3}  [✓ VALIDADO]
+  A ∩ B                           :
+     -> Implementação Manual : {1, 2, 3}
+     -> Solução Nativa (set) : {1, 2, 3}  [✓ VALIDADO]
+  A - B                           :
+     -> Implementação Manual : Ø
+     -> Solução Nativa (set) : Ø  [✓ VALIDADO]
+  A Δ B                           :
+     -> Implementação Manual : Ø
+     -> Solução Nativa (set) : Ø  [✓ VALIDADO]
+  A ⊆ B                           :
+     -> Implementação Manual : True
+     -> Solução Nativa (set) : True  [✓ VALIDADO]
+  A ⊂ B                           :
+     -> Implementação Manual : False
+     -> Solução Nativa (set) : False  [✓ VALIDADO]
+
+>>> CONJUNTOS DISJUNTOS (A = {1, 2}, B = {3, 4})
+  A ∪ B                           :
+     -> Implementação Manual : {1, 2, 3, 4}
+     -> Solução Nativa (set) : {1, 2, 3, 4}  [✓ VALIDADO]
+  A ∩ B                           :
+     -> Implementação Manual : Ø
+     -> Solução Nativa (set) : Ø  [✓ VALIDADO]
+  A - B                           :
+     -> Implementação Manual : {1, 2}
+     -> Solução Nativa (set) : {1, 2}  [✓ VALIDADO]
+  A Δ B                           :
+     -> Implementação Manual : {1, 2, 3, 4}
+     -> Solução Nativa (set) : {1, 2, 3, 4}  [✓ VALIDADO]
+  A ⊆ B                           :
+     -> Implementação Manual : False
+     -> Solução Nativa (set) : False  [✓ VALIDADO]
+  A ⊂ B                           :
+     -> Implementação Manual : False
+     -> Solução Nativa (set) : False  [✓ VALIDADO]
+
+>>> UM CONTIDO NO OUTRO (A = {1, 2}, B = {1, 2, 3})
+  A ∪ B                           :
+     -> Implementação Manual : {1, 2, 3}
+     -> Solução Nativa (set) : {1, 2, 3}  [✓ VALIDADO]
+  A ∩ B                           :
+     -> Implementação Manual : {1, 2}
+     -> Solução Nativa (set) : {1, 2}  [✓ VALIDADO]
+  A - B                           :
+     -> Implementação Manual : Ø
+     -> Solução Nativa (set) : Ø  [✓ VALIDADO]
+  A Δ B                           :
+     -> Implementação Manual : {3}
+     -> Solução Nativa (set) : {3}  [✓ VALIDADO]
+  A ⊆ B                           :
+     -> Implementação Manual : True
+     -> Solução Nativa (set) : True  [✓ VALIDADO]
+  A ⊂ B                           :
+     -> Implementação Manual : True
+     -> Solução Nativa (set) : True  [✓ VALIDADO]
+
+>>> REPETIDOS NA ENTRADA (A = 1, 1, 1, 2)
+  A ∪ B                           :
+     -> Implementação Manual : {1, 2}
+     -> Solução Nativa (set) : {1, 2}  [✓ VALIDADO]
+  A ∩ B                           :
+     -> Implementação Manual : {1, 2}
+     -> Solução Nativa (set) : {1, 2}  [✓ VALIDADO]
+  A - B                           :
+     -> Implementação Manual : Ø
+     -> Solução Nativa (set) : Ø  [✓ VALIDADO]
+  A Δ B                           :
+     -> Implementação Manual : Ø
+     -> Solução Nativa (set) : Ø  [✓ VALIDADO]
+  A ⊆ B                           :
+     -> Implementação Manual : True
+     -> Solução Nativa (set) : True  [✓ VALIDADO]
+  A ⊂ B                           :
+     -> Implementação Manual : False
+     -> Solução Nativa (set) : False  [✓ VALIDADO]
+
+--- CENÁRIO 3: EXEMPLO PRÓPRIO CRIADO PELA EQUIPE ------------------------
+Contexto: Tecnologias dominadas por dois times de desenvolvimento na FATEC
+  Time Web (A)    : Python, TypeScript, React, Docker, SQL
+  Time Mobile (B) : Kotlin, TypeScript, Flutter, Docker, Firebase
+  Stack Total (U) : Python, TypeScript, React, Docker, SQL, Kotlin, Flutter, Firebase, Rust, Go
+
+  Conjunto A                      :
+     -> Implementação Manual : {Docker, Python, React, SQL, TypeScript}
+     -> Solução Nativa (set) : {Docker, Python, React, SQL, TypeScript}  [✓ VALIDADO]
+     📖 Conceito: Conjunto de entrada A com elementos repetidos eliminados para garantir a unicidade matemática.
+  Conjunto B                      :
+     -> Implementação Manual : {Docker, Firebase, Flutter, Kotlin, TypeScript}
+     -> Solução Nativa (set) : {Docker, Firebase, Flutter, Kotlin, TypeScript}  [✓ VALIDADO]
+     📖 Conceito: Conjunto de entrada B com elementos repetidos eliminados.
+  |A| (Cardinalidade de A)        :
+     -> Implementação Manual : 5
+     -> Solução Nativa (set) : 5  [✓ VALIDADO]
+     📖 Conceito: A cardinalidade (|A|) representa a quantidade total de elementos únicos pertencentes a A.
+  |B| (Cardinalidade de B)        :
+     -> Implementação Manual : 5
+     -> Solução Nativa (set) : 5  [✓ VALIDADO]
+     📖 Conceito: A cardinalidade (|B|) representa a quantidade total de elementos únicos pertencentes a B.
+  A ∪ B (União)                   :
+     -> Implementação Manual : {Docker, Firebase, Flutter, Kotlin, Python, React, SQL, TypeScript}
+     -> Solução Nativa (set) : {Docker, Firebase, Flutter, Kotlin, Python, React, SQL, TypeScript}  [✓ VALIDADO]
+     📖 Conceito: A união representa a junção de dois conjuntos, ignorando os números repetidos e criando um conjunto que possui todos os elementos do conjunto A e B.
+  A ∩ B (Interseção)              :
+     -> Implementação Manual : {Docker, TypeScript}
+     -> Solução Nativa (set) : {Docker, TypeScript}  [✓ VALIDADO]
+     📖 Conceito: A interseção representa os elementos comuns, ou seja, apenas os elementos que pertencem simultaneamente a A e a B. Se não houver elementos comuns, resulta no conjunto vazio (Ø).
+  A - B (Diferença)               :
+     -> Implementação Manual : {Python, React, SQL}
+     -> Solução Nativa (set) : {Python, React, SQL}  [✓ VALIDADO]
+     📖 Conceito: A diferença (A - B) representa os elementos que pertencem exclusivamente a A e NÃO pertencem a B. A ordem dos conjuntos importa!
+  B - A (Diferença)               :
+     -> Implementação Manual : {Firebase, Flutter, Kotlin}
+     -> Solução Nativa (set) : {Firebase, Flutter, Kotlin}  [✓ VALIDADO]
+     📖 Conceito: A diferença (B - A) representa os elementos que pertencem exclusivamente a B e NÃO pertencem a A.
+  A Δ B (Diferença Simétrica)     :
+     -> Implementação Manual : {Firebase, Flutter, Kotlin, Python, React, SQL}
+     -> Solução Nativa (set) : {Firebase, Flutter, Kotlin, Python, React, SQL}  [✓ VALIDADO]
+     📖 Conceito: A diferença simétrica representa os elementos que pertencem a A ou a B, mas NÃO a ambos ao mesmo tempo ((A-B) ∪ (B-A)). É o 'OU exclusivo' (XOR) da teoria dos conjuntos.
+  A ⊆ B (Inclusão/Subconjunto)    :
+     -> Implementação Manual : False
+     -> Solução Nativa (set) : False  [✓ VALIDADO]
+     📖 Conceito: A inclusão A ⊆ B indica que TODO elemento do conjunto A também está contido no conjunto B.
+  A ⊂ B (Inclusão Própria)        :
+     -> Implementação Manual : False
+     -> Solução Nativa (set) : False  [✓ VALIDADO]
+     📖 Conceito: A inclusão própria A ⊂ B exige que A seja subconjunto de B e que B tenha pelo menos um elemento a mais que A (A ≠ B).
+  Complemento de A em U           :
+     -> Implementação Manual : {Firebase, Flutter, Go, Kotlin, Rust}
+     -> Solução Nativa (set) : {Firebase, Flutter, Go, Kotlin, Rust}  [✓ VALIDADO]
+     📖 Conceito: O complemento relativo (U - A) representa todos os elementos do Universo U que NÃO pertencem ao conjunto A.
+  Docker ∈ A (Pertinência)        :
+     -> Implementação Manual : True
+     -> Solução Nativa (set) : True  [✓ VALIDADO]
+
+===========================================================================
+          PARTE 2: CONJUNTOS NUMÉRICOS (DEMONSTRAÇÃO OBRIGATÓRIA)          
+===========================================================================
+
++---------+------------+--------------+---------------------+--------------------------------------------------------------------------------------------------------+
+| Entrada | Pertence a | Não Pertence | Geratriz / Reduzida |                                               Observação                                               |
++---------+------------+--------------+---------------------+--------------------------------------------------------------------------------------------------------+
+|    7    | N, Z, Q, R |      I       |         7/1         |                                            Número inteiro.                                             |
+|    -3   |  Z, Q, R   |     N, I     |         -3/1        |                                            Número inteiro.                                             |
+|    0    | N, Z, Q, R |      I       |         0/1         |                                            Número inteiro.                                             |
+|   3/4   |    Q, R    |   N, Z, I    |         3/4         |                         Fração irredutível: 3/4, equivalente ao decimal 0.75.                          |
+|   -5/2  |    Q, R    |   N, Z, I    |         -5/2        |                         Fração irredutível: -5/2, equivalente ao decimal -2.5.                         |
+|   6/3   | N, Z, Q, R |      I       |       6/3 = 2       |                    Fração irredutível: 2/1 que simplifica para o número inteiro 2.                     |
+|  0,(3)  |    Q, R    |   N, Z, I    |      3/9 = 1/3      |                      Dízima periódica (parte não periódica: nenhuma; período: 3)                       |
+|  2,(7)  |    Q, R    |   N, Z, I    |     25/9 = 25/9     |                      Dízima periódica (parte não periódica: nenhuma; período: 7)                       |
+|  1,2(5) |    Q, R    |   N, Z, I    |   113/90 = 113/90   |                         Dízima periódica (parte não periódica: 2; período: 5)                          |
+|  0,(9)  | N, Z, Q, R |      I       |    9/9 = 1/1 = 1    | Dízima periódica (parte não periódica: nenhuma; período: 9). Caso curioso: a geratriz é 9/9 = 1/1 = 1. |
+|    V9   | N, Z, Q, R |      I       |          √9         |                                        A raiz é exata e vale 3.                                        |
+|    V2   |    I, R    |   N, Z, Q    |          √2         |                          Raiz não exata (√2 ≈ 1.414214), portanto irracional.                          |
++---------+------------+--------------+---------------------+--------------------------------------------------------------------------------------------------------+
+
+--- Bônus: Crivo de Eratóstenes e Divisores ------------------------------
+  Primos de N até 30            : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29
+  Gabarito Oficial              : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 [CONFERE]
+  Divisores de 36               : 1, 2, 3, 4, 6, 9, 12, 18, 36
+  Gabarito Oficial              : 1, 2, 3, 4, 6, 9, 12, 18, 36 [CONFERE]
+
+===========================================================================
+      PARTE 3: MINI-PROJETOS DE INTEGRAÇÃO (DEMONSTRAÇÃO OBRIGATÓRIA)      
+===========================================================================
+
+
+--- Mini-Projeto 1: Recomendação por Afinidade (Índice de Jaccard) -------
++------------+---------------------+-------------+-------------------+-------------------+----------------------+
+|    Par     |      Interseção     |    União    | Jaccard Calculado | Gabarito Esperado |      Validação       |
++------------+---------------------+-------------+-------------------+-------------------+----------------------+
+| Ana e Bia  |  {cinema, jazz} (2) | 6 elementos |       0.3333      |     2/6 ≈ 0,33    | [✓ SUCESSO] |
+| Ana e Caio | {cinema, games} (2) | 5 elementos |       0.4000      |     2/5 = 0,40    | [✓ SUCESSO] |
+| Bia e Caio |     {cinema} (1)    | 6 elementos |       0.1667      |     1/6 ≈ 0,17    | [✓ SUCESSO] |
++------------+---------------------+-------------+-------------------+-------------------+----------------------+
+  Recomendação para Ana         : Caio (maior afinidade: 0.40)
+
+--- Mini-Projeto 2: Controle de Acesso por Perfis (RBAC) -----------------
+  Permissões de A (leitor + editor): {editar, ler}
+  Permissões de B (editor + financeiro): {editar, ler, ver_relatorios}
+  Usuário B pode 'excluir'?     : False (Não)
+  editor ⊆ admin ?              : True (Verdadeiro)
+  financeiro ⊆ admin ?          : False (Falso)
+
+--- Mini-Projeto 3: Produto Cartesiano e Análise de 2^n ------------------
+  Produto Cartesiano            : [('P', 'Azul'), ('P', 'Vermelho'), ('M', 'Azul'), ('M', 'Vermelho')]
+  Conjunto das Partes P({1, 2, 3}): 8 subconjuntos: Ø, {1}, {2}, {1, 2}, {3}, {1, 3}, {2, 3}, {1, 2, 3}
+
+--- Mini-Projeto 4: Intervalos Reais [a, b) ------------------------------
+  Intervalo 1                   : [2, 5)
+  Intervalo 2                   : [3, 7]
+  Interseção [2, 5) ∩ [3, 7]    : [3, 5)
+  Pertinência: 2.0 ∈ [2, 5)?    : True
+  Pertinência: 5.0 ∈ [2, 5)?    : False

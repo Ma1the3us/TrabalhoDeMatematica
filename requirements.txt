@@ -1,0 +1,7 @@
+# Laboratório de Conjuntos - FATEC Osasco
+# O projeto foi desenvolvido 100% sobre a biblioteca padrão do Python (Standard Library).
+# Não requer nenhuma dependência externa obrigatória para execução!
+
+# Dependências opcionais para ambiente de desenvolvimento:
+pytest>=7.0.0
+pytest-cov>=4.0.0

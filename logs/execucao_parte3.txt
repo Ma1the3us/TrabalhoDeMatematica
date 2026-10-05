@@ -1,0 +1,33 @@
+
+===========================================================================
+      PARTE 3: MINI-PROJETOS DE INTEGRAÇÃO (DEMONSTRAÇÃO OBRIGATÓRIA)      
+===========================================================================
+
+
+--- Mini-Projeto 1: Recomendação por Afinidade (Índice de Jaccard) -------
++------------+---------------------+-------------+-------------------+-------------------+----------------------+
+|    Par     |      Interseção     |    União    | Jaccard Calculado | Gabarito Esperado |      Validação       |
++------------+---------------------+-------------+-------------------+-------------------+----------------------+
+| Ana e Bia  |  {cinema, jazz} (2) | 6 elementos |       0.3333      |     2/6 ≈ 0,33    | [✓ SUCESSO] |
+| Ana e Caio | {cinema, games} (2) | 5 elementos |       0.4000      |     2/5 = 0,40    | [✓ SUCESSO] |
+| Bia e Caio |     {cinema} (1)    | 6 elementos |       0.1667      |     1/6 ≈ 0,17    | [✓ SUCESSO] |
++------------+---------------------+-------------+-------------------+-------------------+----------------------+
+  Recomendação para Ana         : Caio (maior afinidade: 0.40)
+
+--- Mini-Projeto 2: Controle de Acesso por Perfis (RBAC) -----------------
+  Permissões de A (leitor + editor): {editar, ler}
+  Permissões de B (editor + financeiro): {editar, ler, ver_relatorios}
+  Usuário B pode 'excluir'?     : False (Não)
+  editor ⊆ admin ?              : True (Verdadeiro)
+  financeiro ⊆ admin ?          : False (Falso)
+
+--- Mini-Projeto 3: Produto Cartesiano e Análise de 2^n ------------------
+  Produto Cartesiano            : [('P', 'Azul'), ('P', 'Vermelho'), ('M', 'Azul'), ('M', 'Vermelho')]
+  Conjunto das Partes P({1, 2, 3}): 8 subconjuntos: Ø, {1}, {2}, {1, 2}, {3}, {1, 3}, {2, 3}, {1, 2, 3}
+
+--- Mini-Projeto 4: Intervalos Reais [a, b) ------------------------------
+  Intervalo 1                   : [2, 5)
+  Intervalo 2                   : [3, 7]
+  Interseção [2, 5) ∩ [3, 7]    : [3, 5)
+  Pertinência: 2.0 ∈ [2, 5)?    : True
+  Pertinência: 5.0 ∈ [2, 5)?    : False

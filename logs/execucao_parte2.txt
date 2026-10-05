@@ -1,0 +1,27 @@
+
+===========================================================================
+          PARTE 2: CONJUNTOS NUMÉRICOS (DEMONSTRAÇÃO OBRIGATÓRIA)          
+===========================================================================
+
++---------+------------+--------------+---------------------+--------------------------------------------------------------------------------------------------------+
+| Entrada | Pertence a | Não Pertence | Geratriz / Reduzida |                                               Observação                                               |
++---------+------------+--------------+---------------------+--------------------------------------------------------------------------------------------------------+
+|    7    | N, Z, Q, R |      I       |         7/1         |                                            Número inteiro.                                             |
+|    -3   |  Z, Q, R   |     N, I     |         -3/1        |                                            Número inteiro.                                             |
+|    0    | N, Z, Q, R |      I       |         0/1         |                                            Número inteiro.                                             |
+|   3/4   |    Q, R    |   N, Z, I    |         3/4         |                         Fração irredutível: 3/4, equivalente ao decimal 0.75.                          |
+|   -5/2  |    Q, R    |   N, Z, I    |         -5/2        |                         Fração irredutível: -5/2, equivalente ao decimal -2.5.                         |
+|   6/3   | N, Z, Q, R |      I       |       6/3 = 2       |                    Fração irredutível: 2/1 que simplifica para o número inteiro 2.                     |
+|  0,(3)  |    Q, R    |   N, Z, I    |      3/9 = 1/3      |                      Dízima periódica (parte não periódica: nenhuma; período: 3)                       |
+|  2,(7)  |    Q, R    |   N, Z, I    |     25/9 = 25/9     |                      Dízima periódica (parte não periódica: nenhuma; período: 7)                       |
+|  1,2(5) |    Q, R    |   N, Z, I    |   113/90 = 113/90   |                         Dízima periódica (parte não periódica: 2; período: 5)                          |
+|  0,(9)  | N, Z, Q, R |      I       |    9/9 = 1/1 = 1    | Dízima periódica (parte não periódica: nenhuma; período: 9). Caso curioso: a geratriz é 9/9 = 1/1 = 1. |
+|    V9   | N, Z, Q, R |      I       |          √9         |                                        A raiz é exata e vale 3.                                        |
+|    V2   |    I, R    |   N, Z, Q    |          √2         |                          Raiz não exata (√2 ≈ 1.414214), portanto irracional.                          |
++---------+------------+--------------+---------------------+--------------------------------------------------------------------------------------------------------+
+
+--- Bônus: Crivo de Eratóstenes e Divisores ------------------------------
+  Primos de N até 30            : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29
+  Gabarito Oficial              : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 [CONFERE]
+  Divisores de 36               : 1, 2, 3, 4, 6, 9, 12, 18, 36
+  Gabarito Oficial              : 1, 2, 3, 4, 6, 9, 12, 18, 36 [CONFERE]

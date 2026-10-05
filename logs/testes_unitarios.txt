@@ -1,0 +1,39 @@
+test_caso_borda_conjunto_vazio (tests.test_parte1.TestParte1Conjuntos) ... ok
+test_caso_borda_conjuntos_disjuntos (tests.test_parte1.TestParte1Conjuntos) ... ok
+test_caso_borda_conjuntos_iguais (tests.test_parte1.TestParte1Conjuntos) ... ok
+test_caso_borda_um_contido_no_outro (tests.test_parte1.TestParte1Conjuntos) ... ok
+test_caso_geral_e_repetidos (tests.test_parte1.TestParte1Conjuntos) ... ok
+test_repetidos_na_entrada (tests.test_parte1.TestParte1Conjuntos) ... ok
+test_validacao_completa_contra_solucao_nativa (tests.test_parte1.TestParte1Conjuntos) ... ok
+test_classificacao_dizima_composta_1_2_5 (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_dizima_curiosa_0_9 (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_dizima_simples_0_3 (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_dizima_simples_2_7 (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_fracao_decimal (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_fracao_negativa (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_fracao_redutivel_a_inteiro (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_inteiro_negativo (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_numero_natural (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_raiz_exata (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_raiz_irracional (tests.test_parte2.TestParte2Numeros) ... ok
+test_classificacao_zero (tests.test_parte2.TestParte2Numeros) ... ok
+test_crivo_eratostenes_ate_30 (tests.test_parte2.TestParte2Numeros) ... ok
+test_divisores_de_36 (tests.test_parte2.TestParte2Numeros) ... ok
+test_combinatoria_e_conjunto_das_partes (tests.test_parte3.TestParte3Integracao) ... ok
+test_intervalos_reais (tests.test_parte3.TestParte3Integracao) ... ok
+test_jaccard_recomendador_oficial (tests.test_parte3.TestParte3Integracao) ... ok
+test_rbac_controle_acesso (tests.test_parte3.TestParte3Integracao) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.018s
+
+OK
+
+======================================================================
+Resumo da Execução dos Testes:
+  Total de Testes Executados : 25
+  Testes Aprovados           : 25
+  Falhas (Failures)          : 0
+  Erros (Errors)             : 0
+
+>>> TODOS OS TESTES PASSARAM COM 100% DE SUCESSO! <<<
